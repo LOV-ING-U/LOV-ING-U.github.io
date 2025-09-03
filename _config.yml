@@ -113,9 +113,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "kkwandy"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "서울대학교 컴퓨터공학부 21학번 / 백엔드 개발자로 향하는 길"
   location         : "Somewhere"
   email            :
   links:
