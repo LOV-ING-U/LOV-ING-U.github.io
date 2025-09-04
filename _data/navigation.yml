@@ -9,7 +9,7 @@ docs:
       - title: "Baekjoon"
         url: "/baekjoon"
       - title: "Algorithm Contents"
-        url: "/algorithmcontents"
+        url: /algorithmcontent/
   - title: "CS Knowledge"
     children:
       - title: "Automata Theory"
