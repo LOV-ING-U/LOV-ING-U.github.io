@@ -2,7 +2,26 @@
 main:
   - title: "About Me"
     url: /about/
-  #- title: "Category"
+  - title: "Algorithm"
+    children:
+      - title: "Baekjoon"
+        url: "/baekjoon"
+      - title: "Algorithm Contents"
+        url: "/algorithmcontents"
+  - title: "CS Knowledge"
+    children:
+      - title: "Automata Theory"
+        url: "/automata"
+      - title: "Computer Architecture"
+        url: "/computerarchitecture"
+      - title: "System Programming"
+        url: "/systemprogramming"
+      - title: "Operating System"
+        url: "/os"
+      - title: "Computer Network"
+        url: "/cn"
+      - title: "Database"
+        url: "/db"
   #  url: "/categories/"
   # - title: "Sample Posts"
   #   url: /year-archive/
