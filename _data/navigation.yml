@@ -7,23 +7,23 @@ docs:
   - title: "Algorithm"
     children:
       - title: "Baekjoon"
-        url: "/baekjoon"
+        url: /baekjoon/
       - title: "Algorithm Contents"
         url: /algorithmcontent/
   - title: "CS Knowledge"
     children:
       - title: "Automata Theory"
-        url: "/automata"
+        url: /automata/
       - title: "Computer Architecture"
-        url: "/computerarchitecture"
+        url: /cp/
       - title: "System Programming"
-        url: "/systemprogramming"
+        url: /sp/
       - title: "Operating System"
-        url: "/os"
+        url: /os/
       - title: "Computer Network"
-        url: "/cn"
+        url: /network/
       - title: "Database"
-        url: "/db"
+        url: /db/
   #  url: "/categories/"
   # - title: "Sample Posts"
   #   url: /year-archive/
