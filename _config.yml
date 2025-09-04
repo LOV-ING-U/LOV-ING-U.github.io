@@ -122,9 +122,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:kkwandy@naver.com
-    - label: "Website"
+    - label: "solved.ac"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://solved.ac/profile/kkwandy"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
