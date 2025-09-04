@@ -1,6 +1,6 @@
 ---
 permalink: /os/
-title: "백준 문제풀이 기록"
+title: "Operating System 내용 정리"
 layout: archive
 toc: true
 toc_sticky: true

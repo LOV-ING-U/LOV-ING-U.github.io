@@ -1,6 +1,6 @@
 ---
 permalink: /network/
-title: "백준 문제풀이 기록"
+title: "Computer Network 내용 정리"
 layout: archive
 toc: true
 toc_sticky: true
