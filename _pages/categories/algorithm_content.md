@@ -1,5 +1,5 @@
 ---
-permalink: /temp/
+permalink: /algorithmcontent/
 title: "알고리즘 내용 정리"
 layout: archive
 toc: true
