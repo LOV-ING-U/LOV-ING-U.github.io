@@ -8,7 +8,7 @@ author_profile: true
 types: posts
 ---
 
-{% assign posts = site.categories.os %}
+{% assign posts = site.categories['Operating System']%}
 {% for post in posts %}
   {% include archive-single-2ver.html type=page.entries_layout %}
 {% endfor %}
