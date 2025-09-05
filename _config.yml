@@ -325,8 +325,8 @@ defaults:
       comments: # true
       share: true
       related: true
-      sidebar:
-        nav: "docs"
+      # sidebar:
+      #  nav: "docs"
       sidebar_main: true
         
   # _pages

@@ -1,5 +1,5 @@
 ---
-permalink: /baekjoon/
+permalink: baekjoon
 title: "백준 문제풀이 기록"
 layout: archive
 toc: true
@@ -8,7 +8,7 @@ author_profile: true
 types: posts
 ---
 
-{% assign posts = site.categories['baekjoon']%}
+{% assign posts = site.categories['Baekjoon']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

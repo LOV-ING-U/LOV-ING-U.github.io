@@ -1,5 +1,5 @@
 ---
-permalink: /javadesignpattern/
+permalink: javadesignpattern
 title: "Java Design Pattern"
 layout: archive
 toc: true
@@ -8,7 +8,7 @@ author_profile: true
 types: posts
 ---
 
-{% assign posts = site.categories['java_design_patterns']%}
+{% assign posts = site.categories['Design Pattern']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

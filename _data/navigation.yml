@@ -2,40 +2,33 @@
 main:
   - title: "About Me"
     url: /about/
-    
-docs:
-  - title: "Algorithm"
-    children:
-      - title: "Baekjoon"
-        url: /baekjoon/
-      - title: "Algorithm Contents"
-        url: /algorithmcontent/
-  - title: "CS Knowledge"
-    children:
-      - title: "Automata Theory"
-        url: /automata/
-      - title: "Computer Architecture"
-        url: /cp/
-      - title: "System Programming"
-        url: /sp/
-      - title: "Operating System"
-        url: /os/
-      - title: "Computer Network"
-        url: /network/
-      - title: "Database"
-        url: /db/
-  - title: "Java"
-    children:
-      - title: "Spring"
-        url: /spring/
-      - title: "Effective Java"
-        url: /effectivejava/
-      - title: "Java Design Pattern"
-        url: /javadesignpattern/
-  #  url: "/categories/"
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+#    
+#docs:
+  #- title: "Algorithm"
+ #  children:
+   #   - title: "Baekjoon"
+   #     url: /baekjoon/
+    #  - title: "Algorithm Contents"
+    #    url: /algorithmcontent/
+ #- title: "CS Knowledge"
+  #  children:
+    #  - title: "Automata Theory"
+  #      url: /automata/
+    #  - title: "Computer Architecture"
+    #    url: /cp/
+    #  - title: "System Programming"
+     #   url: /sp/
+     # - title: "Operating System"
+     #   url: /os/
+     # - title: "Computer Network"
+     #   url: /network/
+     # - title: "Database"
+     #   url: /db/
+  #- title: "Java"
+   # children:
+   #   - title: "Spring"
+   #     url: /spring/
+   #   - title: "Effective Java"
+   #     url: /effectivejava/
+   #   - title: "Java Design Pattern"
+   #     url: /javadesignpattern/

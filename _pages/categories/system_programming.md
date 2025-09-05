@@ -1,5 +1,5 @@
 ---
-permalink: /sp/
+permalink: sp
 title: "System programming 내용 정리"
 layout: archive
 toc: true
@@ -8,7 +8,7 @@ author_profile: true
 types: posts
 ---
 
-{% assign posts = site.categories['system_programming']%}
+{% assign posts = site.categories['System Programming']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

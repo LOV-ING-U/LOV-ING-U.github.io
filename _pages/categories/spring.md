@@ -1,5 +1,5 @@
 ---
-permalink: /spring/
+permalink: spring
 title: "Spring"
 layout: archive
 toc: true
@@ -8,7 +8,7 @@ author_profile: true
 types: posts
 ---
 
-{% assign posts = site.categories['spring']%}
+{% assign posts = site.categories['Spring']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}
