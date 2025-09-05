@@ -10,5 +10,5 @@ types: posts
 
 {% assign posts = site.categories['Computer Network']%}
 {% for post in posts %}
-  {% include archive-single.html type=page.entries_layout %}
+  {% include archive-single-2ver.html type=page.entries_layout %}
 {% endfor %}
