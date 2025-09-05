@@ -1,5 +1,5 @@
 ---
-permalink: effectivejava
+permalink: categories/effectivejava
 title: "Effective Java"
 layout: archive
 toc: true

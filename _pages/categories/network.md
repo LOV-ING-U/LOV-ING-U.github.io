@@ -1,5 +1,5 @@
 ---
-permalink: network
+permalink: categories/network
 title: "Computer Network 내용 정리"
 layout: archive
 toc: true

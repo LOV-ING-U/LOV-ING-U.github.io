@@ -1,5 +1,5 @@
 ---
-permalink: sp
+permalink: categories/sp
 title: "System programming 내용 정리"
 layout: archive
 toc: true

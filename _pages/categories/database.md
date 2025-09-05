@@ -1,5 +1,5 @@
 ---
-permalink: db
+permalink: categories/db
 title: "Database 내용 정리"
 layout: archive
 toc: true

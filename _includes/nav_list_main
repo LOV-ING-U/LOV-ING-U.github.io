@@ -17,14 +17,14 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Baekjoon" %}
-                        <li><a href="baekjoon" class="">Baekjoon ({{category[1].size}})</a></li>
+                        <li><a href="/categories/baekjoon" class="">Baekjoon ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Algorithm Contents" %}
-                        <li><a href="algorithmcontent" class="">Algorithm Contents ({{category[1].size}})</a></li>
+                        <li><a href="/categories/algorithmcontent" class="">Algorithm Contents ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -32,7 +32,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Automata Theory" %}
-                        <li><a href="automata" class="">Automata Theory ({{category[1].size}})</a></li>
+                        <li><a href="/categories/automata" class="">Automata Theory ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -46,28 +46,28 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "System Programming" %}
-                        <li><a href="sp" class="">System Programming ({{category[1].size}})</a></li>
+                        <li><a href="/categories/sp" class="">System Programming ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Operating System" %}
-                        <li><a href="os" class="">Operating System ({{category[1].size}})</a></li>
+                        <li><a href="/categories/os" class="">Operating System ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Computer Network" %}
-                        <li><a href="network" class="">Computer Network ({{category[1].size}})</a></li>
+                        <li><a href="/categories/network" class="">Computer Network ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Database" %}
-                        <li><a href="db" class="">Database ({{category[1].size}})</a></li>
+                        <li><a href="/categories/db" class="">Database ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -75,21 +75,21 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Spring" %}
-                        <li><a href="spring" class="">Spring ({{category[1].size}})</a></li>
+                        <li><a href="/categories/spring" class="">Spring ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Effetive Java" %}
-                        <li><a href="effectivejava" class="">Effective Java ({{category[1].size}})</a></li>
+                        <li><a href="/categories/effectivejava" class="">Effective Java ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Design Pattern" %}
-                        <li><a href="javadesignpattern" class="">Design Pattern ({{category[1].size}})</a></li>
+                        <li><a href="/categories/javadesignpattern" class="">Design Pattern ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -1,5 +1,5 @@
 ---
-permalink: os
+permalink: categories/os
 title: "Operating System 내용 정리"
 layout: archive
 toc: true

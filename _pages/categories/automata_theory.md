@@ -1,5 +1,5 @@
 ---
-permalink: automata
+permalink: categories/automata
 title: "Automata Theory 내용 정리"
 layout: archive
 toc: true

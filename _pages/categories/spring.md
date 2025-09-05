@@ -1,5 +1,5 @@
 ---
-permalink: spring
+permalink: categories/spring
 title: "Spring"
 layout: archive
 toc: true

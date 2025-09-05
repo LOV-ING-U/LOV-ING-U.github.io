@@ -1,5 +1,5 @@
 ---
-permalink: javadesignpattern
+permalink: categories/javadesignpattern
 title: "Java Design Pattern"
 layout: archive
 toc: true
