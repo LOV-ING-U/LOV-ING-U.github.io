@@ -12,6 +12,7 @@ Graph에서 최단거리를 구하는 알고리즘인 Dijkstra, Bellman - Ford, 
 ## Dijkstra Algorithm  
   
 Graph의 가중치가 모두 음이 아닌 그래프에서, 특정한 시작 정점 S와 그래프의 다른 모든 점들 사이의 최단 거리를 구하는 알고리즘이다.  
+  
 구현 방법은 2가지가 있다. 첫 번째는 Adjacency Matrix(인접 행렬)를 이용하여 시간복잡도 $$O(V^{2})$$로 구현하는 것이며, 두 번째는 minHeap(최소 힙)을 이용하여 시간복잡도 $$O(ElogV)$$로 구현하는 것이다.  
   
 - Adjacency Matrix Version  
@@ -51,6 +52,8 @@ Graph의 가중치가 모두 음이 아닌 그래프에서, 특정한 시작 정
 ```  
   
 distance[] 배열은 원점(start)으로부터의 최단 거리를 저장하는 배열이다. minVertex() 함수는 방문하지 않은 정점 중 가장 거리가 짧은 vertex를 반환하며, 조건에 맞는 정점이 없을 경우 -1을 반환한다.  
+
+따라서, Dijkstra에서 v == -1 이면 "조건을 만족하는 정점이 없어서 선택되지 않았다"는 것이므로 break하여 중단한다. distance[v] == INF의 경우 "정점이 선택되었지만 start에서 도달 불가능한 경우"를 대비하여 넣었다. 둘 중 하나만 택해도 무방하지만 Defensive Programming 의도로 코드에 넣었다.  
   
 Dijkstra 함수의 for문이 1번 수행될 때마다, 어떠한 정점 하나가 minVertex()의 output으로서 Dijkstra algorithm을 수행하므로 반복문은 (V - 1)번 수행하면 된다.  
   
