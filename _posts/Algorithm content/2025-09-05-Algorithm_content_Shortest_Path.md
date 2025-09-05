@@ -12,7 +12,7 @@ Graph에서 최단거리를 구하는 알고리즘인 Dijkstra, Bellman - Ford, 
 ## Dijkstra Algorithm  
   
 Graph의 가중치가 모두 음이 아닌 그래프에서, 특정한 시작 정점 S와 그래프의 다른 모든 점들 사이의 최단 거리를 구하는 알고리즘이다.  
-구현 방법은 2가지가 있다. 첫 번째는 Adjacency Matrix(인접 행렬)를 이용하여 시간복잡도 (\O(V^{2})\)로 구현하는 것이며, 두 번째는 minHeap(최소 힙)을 이용하여 시간복잡도 (\O((V + E)logV)\)로 구현하는 것이다.  
+구현 방법은 2가지가 있다. 첫 번째는 Adjacency Matrix(인접 행렬)를 이용하여 시간복잡도 \O(V^{2})\로 구현하는 것이며, 두 번째는 minHeap(최소 힙)을 이용하여 시간복잡도 \O((V + E)logV)\로 구현하는 것이다.  
   
 ## Bellman - Ford Algorithm  
   
