@@ -60,37 +60,37 @@ Dijkstra의 경우, 어떠한 정점 v에 대해 minVertex의 output으로 나�
   
 2. Priority Queue  
 ```java
-static void Dijkstra(int start){
-  PriorityQueue<Node> pq = new PriorityQueue<>(new Comparator<Node>() {
-    @Override
-    public int compare(Node e1, Node e2) {
-      return e1.dist - e2.dist;
-    }
-  }); pq.add(new Node(start, 0)); distance[start] = 0;
+  static void Dijkstra(int start){
+    PriorityQueue<Node> pq = new PriorityQueue<>(new Comparator<Node>() {
+      @Override
+      public int compare(Node e1, Node e2) {
+        return e1.dist - e2.dist;
+      }
+    }); pq.add(new Node(start, 0)); distance[start] = 0;
 
-  while(!pq.isEmpty()){
-    Node cur = pq.poll();
+    while(!pq.isEmpty()){
+      Node cur = pq.poll();
 
-    for(int x = 0; x < graph[cur.v].size(); x++){
-      Edge e = graph[cur.v].get(x);
-
-      if(distance[e.v] > cur.dist + e.d){
-        distance[e.v] = cur.dist + e.d;
-        pq.add(new Node(e.v, distance[e.v]));
+      for(int x = 0; x < graph[cur.v].size(); x++){
+        Edge e = graph[cur.v].get(x);
+  
+        if(distance[e.v] > cur.dist + e.d){
+          distance[e.v] = cur.dist + e.d;
+          pq.add(new Node(e.v, distance[e.v]));
+        }
       }
     }
   }
-}
 
-class Node{
-  int v;
-  int dist;
+  class Node{
+   int v;
+    int dist;
 
-  Node(int v, int dist){
-    this.v = v;
-    this.dist = dist;
+    Node(int v, int dist){
+      this.v = v;
+      this.dist = dist;
+    }
   }
-}
 ```  
   
 Node class를 새로 정의하여, v에 현재 정점 그리고 dist에 start 정점에서 v까지의 누적 거리를 담는다.  
@@ -108,35 +108,35 @@ while문 안의 if문의 경우 정점 cur.v와 e.v가 연결된 경우에만 �
   
 Graph의 가중치가 음수인 경우에도 사용할 수 있는 최단거리 알고리즘이며, 이 경우 그래프 내부에 음의 사이클이 존재해서는 안 된다. 왜냐하면 음의 사이클이 존재할 경우, 무한정 반복하면 항상 그 전 결과보다 작은 값을 얻기 때문이다.  
 ```java
-static boolean bellMan_Ford(int start) {
-  distance[start] = 0;
+  static boolean bellMan_Ford(int start) {
+    distance[start] = 0;
 
-  for (int i = 0; i < N; i++) {
-    for (Edge e : edges) {
-      if(distance[e.u] == INF) continue;
+    for (int i = 0; i < N; i++) {
+      for (Edge e : edges) {
+        if(distance[e.u] == INF) continue;
 
-      if(distance[e.v] > distance[e.u] + e.weight){
-        distance[e.v] = distance[e.u] + e.weight;
+        if(distance[e.v] > distance[e.u] + e.weight){
+          distance[e.v] = distance[e.u] + e.weight;
 
-        if(i == (N - 1)) return false;
+          if(i == (N - 1)) return false;
+        }
       }
     }
+
+   return true;
   }
 
-  return true;
-}
+  class Edge{
+    int u;
+    int v;
+    int weight;
 
-class Edge{
-  int u;
-  int v;
-  int weight;
-
-  Edge(int u, int v, int weight) {
-    this.u = u;
-    this.v = v;
-    this.weight = weight;
+    Edge(int u, int v, int weight) {
+      this.u = u;
+      this.v = v;
+      this.weight = weight;
+    }
   }
-}
 ```  
   
 Dijkstra와 다르게, 정점이 선택된다고 해서 반드시 그것이 최단거리임을 보장할 수 없다. 음의 간선에 의해 기존 Dijkstar의 수학적 정당성이 깨질 수 있으므로, 1번의 과정마다 반드시 모든 edge를 탐사해야 한다.  
@@ -170,6 +170,8 @@ Floyd - Warshall Algorithm의 경우 점화식을 구현해 놓은 것이다. i�
   
 점화식의 완전한 원본은 Dk[i][j] = 거치는 중간 정점이 {1, 2, ..., k}일 때 i와 j 사이의 최단경로로 정의하고, Dk[i][j] = min(D(k - 1)[i][j], D(k - 1)[i][k] + D(k - 1)[k][j])로 정의하여 거치는 중간 정점의 집합을 순차적으로 늘려나가는 것이 핵심이다.  
   
-그런데 여기서 for문의 순서를 바꾸면, 즉 k를 안쪽으로 넣어버리면 해당 점화식의 정확성을 보장하는 원리인 "허용 가능한 중간 정점의 집합을 순차적으로 늘려 나간다"는 제약이 깨진다. 따라서 올바른 결과를 얻기 위해서는 k를 담당하는 for문을 가장 바깥으로 뺀 후, k를 고정하여 허용 가능한 중간 정점의 범위를 고정한 후 i와 j 사이의 거리를 계산해야 한다.  
+그런데 여기서 for문의 순서를 바꾸면, 즉 k를 안쪽으로 넣어버리면 해당 점화식의 정확성을 보장하는 원리인 "허용 가능한 중간 정점의 집합을 순차적으로 늘려 나간다"는 제약이 깨진다.  
+  
+따라서 올바른 결과를 얻기 위해서는 k를 담당하는 for문을 가장 바깥으로 뺀 후, k를 고정하여 허용 가능한 중간 정점의 범위를 고정한 후 i와 j 사이의 거리를 계산해야 한다.  
   
 총 시간복잡도는 3중 for문이므로 $$O(V^{3})$$이다. |V|가 커질수록 시간복잡도는 기하급수적으로 증가하므로 작은 |V|에 대해 사용하여야 안전하다.
