@@ -24,6 +24,14 @@ docs:
         url: /network/
       - title: "Database"
         url: /db/
+  - title: "Java"
+    children:
+      - title: "Spring"
+        url: /spring/
+      - title: "Effective Java"
+        url: /effectivejava/
+      - title: "Java Design Pattern"
+        url: /javadesignpattern/
   #  url: "/categories/"
   # - title: "Sample Posts"
   #   url: /year-archive/

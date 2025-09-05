@@ -159,7 +159,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-  since: "2013"
+  since: "2025"
 
 
 # Reading Files
@@ -327,6 +327,7 @@ defaults:
       related: true
       sidebar:
         nav: "docs"
+      sidebar_main: true
         
   # _pages
   - scope:
@@ -335,5 +336,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar:
-        nav: "docs"
