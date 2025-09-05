@@ -14,7 +14,7 @@ Graph에서 최단거리를 구하는 알고리즘인 Dijkstra, Bellman - Ford, 
 Graph의 가중치가 모두 음이 아닌 그래프에서, 특정한 시작 정점 S와 그래프의 다른 모든 점들 사이의 최단 거리를 구하는 알고리즘이다.  
 구현 방법은 2가지가 있다. 첫 번째는 Adjacency Matrix(인접 행렬)를 이용하여 시간복잡도 $$O(V^{2})$$로 구현하는 것이며, 두 번째는 minHeap(최소 힙)을 이용하여 시간복잡도 $$O(ElogV)$$로 구현하는 것이다.  
   
-1. Adjacency Matrix  
+- Adjacency Matrix  
 ```java
     static void Dijkstra(int start){
       distance[start] = 0;
@@ -58,7 +58,7 @@ Dijkstra의 경우, 어떠한 정점 v에 대해 minVertex의 output으로 나�
 
 따라서 Dijkstra function의 for문이 (V - 1)번 수행되고, minVertex() 함수 내부에서 각 정점들을 1번씩 검사하므로 전체 시간복잡도는 $$O(V^{2})$$로 결정된다.  
   
-2. Priority Queue  
+- Priority Queue Version  
 ```java
   static void Dijkstra(int start){
     PriorityQueue<Node> pq = new PriorityQueue<>(new Comparator<Node>() {
