@@ -1,5 +1,5 @@
 ---
-title: "[Shortest Path] 최단거리 알고리즘 - Dijkstra, Bellman - Ford, Floyd - Warshall"
+title: "[Shortest Path] 최단거리 알고리즘 : Dijkstra, Bellman - Ford, Floyd - Warshall"
 last_modified_at: 2025-09-05
 categories:
   - Algorithm Contents
