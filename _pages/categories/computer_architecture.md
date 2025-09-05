@@ -1,5 +1,5 @@
 ---
-permalink: cp
+permalink: categories/cp
 title: "Computer Architecture 내용 정리"
 layout: archive
 toc: true
