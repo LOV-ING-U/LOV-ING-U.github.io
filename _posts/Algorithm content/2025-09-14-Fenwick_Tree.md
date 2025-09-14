@@ -99,8 +99,8 @@ Sum 또한 동일하다. 반대로 n부터 시작하여 index >= 1을 만족할 
 ```java
   for(int i = 1; i < tree.length; i++) tree[i] = orgArray[i] // org array copy
   for(int i = 1; i < tree.length; i++) {
-    j = i + (i & -i);
-    if (j <= N) t[j] += t[i];
+    int j = i + (i & -i);
+    if (j < tree.length) tree[j] += tree[i];
   }
 ``` 
 (Fenwick Tree의 Fast Build)  
