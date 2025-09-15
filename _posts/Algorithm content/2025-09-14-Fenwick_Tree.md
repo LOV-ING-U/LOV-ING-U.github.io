@@ -7,11 +7,11 @@ comments: true
 use_math: true
 ---
   
-## Fenwick Tree의 생성 규칙  
-
 펜윅 트리(Fenwick Tree)란, 세그먼트 트리에서 한 단계 진화한 자료구조로서 bit 연산을 통해 데이터를 저장하고 관리하는 Tree형 자료구조이다.  
   
 Fenwick Tree의 시작 index는 1부터 시작하며, 세그먼트 트리와 마찬가지로 배열의 어떠한 연속된 구간의 합을 node의 value로 가지는데 그 규칙이 특이하다.  
+  
+## Fenwick Tree의 생성 규칙  
   
 Fenwick Tree의 index = i일 때 해당 node에 저장되는 값 = 원본 배열의 index i부터 시작하여, i를 2진법으로 표현한 후 LSB에서 MSB 방향으로 bit를 탐색하였을 때 가장 먼저 1이 나오는 자릿수의 2의 거듭제곱 만큼의 개수만큼의 합(Fenwick Tree와 원본 배열은 1-based라고 가정)  
   
