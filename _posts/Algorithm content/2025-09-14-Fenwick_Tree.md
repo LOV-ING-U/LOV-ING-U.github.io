@@ -7,6 +7,8 @@ comments: true
 use_math: true
 ---
   
+## Fenwick Tree의 생성 규칙  
+
 펜윅 트리(Fenwick Tree)란, 세그먼트 트리에서 한 단계 진화한 자료구조로서 bit 연산을 통해 데이터를 저장하고 관리하는 Tree형 자료구조이다.  
   
 Fenwick Tree의 시작 index는 1부터 시작하며, 세그먼트 트리와 마찬가지로 배열의 어떠한 연속된 구간의 합을 node의 value로 가지는데 그 규칙이 특이하다.  
@@ -19,6 +21,8 @@ index = 6이면 6 = 110(2)이므로, 고려하는 개수는 2^1 = 2개이며 Fen
   
 같은 방식으로, index가 홀수이면 반드시 A[index] 자기 자신만 저장된다. 홀수는 2진법으로 나타내면 0번째 자리가 무조건 1이기 때문이다.  
   
+## Fenwick Tree의 Update  
+
 정보를 위와 같은 방식으로 저장하기는 하지만, Update 요청이 들어오면 어떻게 될까? 예를 들어 원본 배열 A[]의 9번째 index의 값을 수정한다면 어떻게 될까? 그렇다면, 9번째 index와 관련된 Fenwick tree의 index를 전부 찾아 해당 index의 값을 tree 상에서 수정해주어야 할 것이다.  
   
 우선 index = 9의 값을 수정했을 때, Fenwick Tree 상에서 영향을 받는 index는 다음과 같다 : 9, 10, 12, 16.  
@@ -45,6 +49,8 @@ index = 6이면 6 = 110(2)이므로, 고려하는 개수는 2^1 = 2개이며 Fen
   }  
 ```  
   
+## Fenwick Tree의 query 수행 과정  
+
 펜윅 트리는 세그먼트 트리와 마찬가지로 1번의 구간합 요청을 log 시간 단위로 처리할 수 있다. A[1] + ... + A[idx] 즉 index = 1부터 index = idx까지 모든 원소의 합을 요청하면 어떻게 될까?  
   
 (편의상 tree = Fenwick Tree) tree[idx]가 가지고 있는 값은, 펜윅 트리의 생성 원리에 따라, A[idx]부터 시작하여 최초로 0이 아닌 bit가 나오는 자릿수의 2의 거듭제곱 만큼의 개수를 포함한다. 따라서, 이 경우도 동일하게 최초로 0이 아닌 bit가 나오는 자릿수를 찾아 이를 계속해서 원래 index에 빼면 된다. 이를 index >= 1이 될 때까지 반복하면, 결국 A[idx] + ... + A[1]의 값을 구할 수 있다.  
@@ -59,6 +65,8 @@ index = 6이면 6 = 110(2)이므로, 고려하는 개수는 2^1 = 2개이며 Fen
   } 
 ```  
   
+## Fenwick Tree 전체 구현 코드 및 시간복잡도 분석  
+
 코드 전문은 아래와 같다.
 ```java
   class FenWickTree{
@@ -95,6 +103,8 @@ Update 함수의 경우, while문이 돌아가는 횟수가 시간복잡도를 �
   
 Sum 또한 동일하다. 반대로 n부터 시작하여 index >= 1을 만족할 때까지 자릿수를 하나씩 내려가는 것과 같으므로, 시간복잡도는 $$O(logn)$$으로 동일하다.  
   
+## Fenwick Tree의 Fast Build  
+
 추가로, Fenwick Tree안의 initialization을 단순히 Update를 n번 부르게 하는 것이 아닌 빠르게 build할 수도 있다.  
 ```java
   for(int i = 1; i < tree.length; i++) tree[i] = orgArray[i] // org array copy
