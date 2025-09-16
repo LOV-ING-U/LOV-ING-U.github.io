@@ -86,7 +86,7 @@ i = 1부터 시작하여(= 첫번째 물건부터 고려하여), 이전과 같�
   
 구현도 훨씬 간단하다. 아래는 해당 문제의 pseudo code이다.  
 ```java
-  sort all products with (value / weight) descending order
+  sort all products with ((double)value / weight) descending order
   
   for all products
     if capacity <= 0
