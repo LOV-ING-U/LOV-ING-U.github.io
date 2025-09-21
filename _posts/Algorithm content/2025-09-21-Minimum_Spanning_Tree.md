@@ -86,6 +86,6 @@ E[] 배열은 MST에 edge를 추가하기 위해 사용하는 배열로, relax�
   
 추가로, 프림 알고리즘에서는 어떤 정점이 한번 MST에 들어가면 해당 정점의 distance 값은 갱신되지 않음이 수학적으로 보장되어 있다(수학적 귀납법 + 귀류법을 이용하여 증명 가능). 따라서 relax 시 visited 체크는 필요없다.  
   
-다익스트라 알고리즘의 adjacency matrix version과 시간복잡도는 완전히 같다. 따라서 시간복잡도는 $$O(V_{2})$$이다.  
+다익스트라 알고리즘의 adjacency matrix version과 시간복잡도는 완전히 같다. 따라서 시간복잡도는 $$O(V^{2})$$이다.  
   
 - related BaekJoon problem : 1197
