@@ -8,7 +8,7 @@ categories:
 학기 종강하고 진짜 오랜만에 글을 쓰는 것 같다.  
 오랜만에 코딩 테스트 문제를 풀려니 뭔가 새롭게 느껴지기도 하고 실제 기출문제들의 풀이를 기록해놓는 것도 좋겠다 싶어서 새로 카테고리를 하나 만들어서 기록할 것이다.  
   
-문제는 프로그래머스에 모두 공개되어 있다. https://school.programmers.co.kr/learn/challenges?order=recent  
+문제는 프로그래머스에 모두 공개되어 있다. <https://school.programmers.co.kr/learn/challenges?order=recent>
   
 # 1. 가장 많이 받은 선물  
 단순한 구현 문제. 2차원 배열 하나를 선언해서 선물을 주고받은 관계를 표현하고, 각 사람이 총 받은/준 선물 갯수를 기록하는 1차원 배열 하나를 더 선언해서 선물 지수를 계산한다.  
