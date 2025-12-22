@@ -2,27 +2,27 @@
 main:
   - title: "About Me"
     url: /about/
-    
-docs:
-  - title: "Algorithm"
-    children:
-    - title: "Baekjoon"
-      url: /baekjoon/
-    - title: "Algorithm Contents"
-      url: /algorithmcontent/
-    - title: "Coding Test"
-      url: /codingtest/
-  - title: "CS Knowledge"
-    children:
-    - title: "Automata Theory"
-      url: /automata/
-    - title: "Computer Architecture"
-      url: /cp/
-    - title: "System Programming"
-      url: /sp/
-    - title: "Operating System"
-      url: /os/
-    - title: "Computer Network"
-      url: /network/
-    - title: "Database"
-      url: /db/
+#    
+#docs:
+  #- title: "Algorithm"
+  # children:
+   #   - title: "Baekjoon"
+   #     url: /baekjoon/
+    #  - title: "Algorithm Contents"
+    #    url: /algorithmcontent/
+    #   - title: "Coding Test"
+   #     url: /codingtest/
+  #- title: "CS Knowledge"
+   #  children:
+   #  - title: "Automata Theory"
+   #      url: /automata/
+    #  - title: "Computer Architecture"
+    #    url: /cp/
+    #  - title: "System Programming"
+     #   url: /sp/
+     # - title: "Operating System"
+     #   url: /os/
+     # - title: "Computer Network"
+     #   url: /network/
+     # - title: "Database"
+     #   url: /db/
