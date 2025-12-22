@@ -10,6 +10,10 @@ main:
    #     url: /baekjoon/
     #  - title: "Algorithm Contents"
     #    url: /algorithmcontent/
+  #- title: "Coding Test"
+   # children:
+   #   - title: "Spring"
+   #     url: /codingtest/
  #- title: "CS Knowledge"
   #  children:
     #  - title: "Automata Theory"
@@ -24,11 +28,3 @@ main:
      #   url: /network/
      # - title: "Database"
      #   url: /db/
-  #- title: "Java"
-   # children:
-   #   - title: "Spring"
-   #     url: /spring/
-   #   - title: "Effective Java"
-   #     url: /effectivejava/
-   #   - title: "Java Design Pattern"
-   #     url: /javadesignpattern/
