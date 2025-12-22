@@ -5,19 +5,17 @@ main:
 #    
 #docs:
   #- title: "Algorithm"
- #  children:
+  # children:
    #   - title: "Baekjoon"
    #     url: /baekjoon/
     #  - title: "Algorithm Contents"
     #    url: /algorithmcontent/
-  #- title: "Coding Test"
-   # children:
-   #   - title: "Spring"
+    #   - title: "Coding Test"
    #     url: /codingtest/
- #- title: "CS Knowledge"
-  #  children:
-    #  - title: "Automata Theory"
-  #      url: /automata/
+  #- title: "CS Knowledge"
+   #  children:
+   #  - title: "Automata Theory"
+   #      url: /automata/
     #  - title: "Computer Architecture"
     #    url: /cp/
     #  - title: "System Programming"
