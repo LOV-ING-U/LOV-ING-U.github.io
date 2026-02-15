@@ -1,0 +1,17 @@
+redis_connected_clients
+1000 *
+(
+  sum(rate(http_server_requests_seconds_sum{job="rainmind-app"}[1m]))
+  /
+  sum(rate(http_server_requests_seconds_count{job="rainmind-app"}[1m]))
+)
+redis_memory_used_bytes
+1000 *
+(
+  sum(rate(http_server_requests_seconds_sum{job="rainmind-app", uri="/v1/auth/user/login"}[1m]))
+  /
+  sum(rate(http_server_requests_seconds_count{job="rainmind-app", uri="/v1/auth/user/login"}[1m]))
+)
+max_over_time(hikaricp_connections_active[1m])
+sum(rate(http_server_requests_seconds_count{job="rainmind-app"}[1m]))
+sum by (status) (rate(http_server_requests_seconds_count{job="rainmind-app"}[1m]))

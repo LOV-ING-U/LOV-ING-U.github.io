@@ -1,0 +1,10 @@
+container_memory_working_set_bytes{container_label_com_docker_compose_service="app"}
+sum(rate(http_server_requests_seconds_count{job="rainmind-app", uri="/v1/auth/user/register"}[1m]))
+1000 *
+(
+  rate(http_server_requests_seconds_sum{job="rainmind-app", uri="/v1/auth/user/register"}[1m])
+  /
+  rate(http_server_requests_seconds_count{job="rainmind-app", uri="/v1/auth/user/register"}[1m])
+)
+
+k6 run -e BASE_URL=http://172.31.58.208:8080 --summary-trend-stats="avg,min,med,p(90),p(95),max" --summary-export=out.json makeuser_many.js

@@ -1,0 +1,31 @@
+1. CPU사용량
+sum(rate(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="app"}[1m]))
+
+2. JVM 힙메모리
+sum(jvm_memory_used_bytes{job="rainmind-app", area="heap"}) / 1000 / 1000
+
+3. 힙메모리 사용률(%)
+100 * sum(jvm_memory_used_bytes{job="rainmind-app", area="heap"}) / sum(jvm_memory_max_bytes{job="rainmind-app", area="heap"})
+
+4. stop the world 시간
+rate(jvm_gc_pause_seconds_sum{job="rainmind-app"}[1m]) * 1000
+
+5. TPS 상태코드 별 그래프(RPS)
+sum by (status) (
+  rate(http_server_requests_seconds_count{
+    job="rainmind-app",
+    uri="/v1/schedules"
+  }[1m])
+)
+
+6. schedule 생성 호출 rps
+sum(rate(http_server_requests_seconds_count{job="rainmind-app", uri="/v1/schedules", method="POST"}[1m]))
+
+7. DB 커넥션 풀 활성화 수
+hikaricp_connections_active{job="rainmind-app", instance="app:8080"}
+
+8. 어플리케이션 총 메모리 사용량(MB)
+container_memory_working_set_bytes{container_label_com_docker_compose_service="app"} / 1000 / 1000
+
+9. OLD gc
+sum(rate(jvm_gc_pause_seconds_count{job="rainmind-app", action="end of major GC"}[1m]))
