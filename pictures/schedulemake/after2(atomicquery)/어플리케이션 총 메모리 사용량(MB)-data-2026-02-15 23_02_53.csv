@@ -1,0 +1,22 @@
+"Time","{container_label_com_docker_compose_config_hash=""81391a06a0cd4e9cb7138294c227747570b8e9147d03963143a52600b346cb00"", container_label_com_docker_compose_container_number=""1"", container_label_com_docker_compose_depends_on=""redis:service_healthy:false,mysql:service_healthy:false"", container_label_com_docker_compose_image=""sha256:c1fc2fa3ea5d52d8864e36ae65b983ea78d0dbad7cbce4ccd9c9434b9b5fec75"", container_label_com_docker_compose_oneoff=""False"", container_label_com_docker_compose_project=""rainmind"", container_label_com_docker_compose_project_config_files=""/home/ubuntu/apps/rainmind/docker-compose.ec2.yaml"", container_label_com_docker_compose_project_working_dir=""/home/ubuntu/apps/rainmind"", container_label_com_docker_compose_service=""app"", container_label_com_docker_compose_version=""5.0.2"", container_label_org_opencontainers_image_ref_name=""ubuntu"", container_label_org_opencontainers_image_version=""24.04"", id=""/system.slice/docker-fd5858a2dd34965d19adc0f33a941a1dffc2f925900d6b65b0c4f72f5584a364.scope"", image=""rainmind-app"", instance=""cadvisor:8080"", job=""cadvisor"", name=""rainmind_app""}"
+2026-02-15 22:57:45,596 MB
+2026-02-15 22:58:00,596 MB
+2026-02-15 22:58:15,596 MB
+2026-02-15 22:58:30,596 MB
+2026-02-15 22:58:45,596 MB
+2026-02-15 22:59:00,596 MB
+2026-02-15 22:59:15,596 MB
+2026-02-15 22:59:30,596 MB
+2026-02-15 22:59:45,596 MB
+2026-02-15 23:00:00,596 MB
+2026-02-15 23:00:15,596 MB
+2026-02-15 23:00:30,596 MB
+2026-02-15 23:00:45,596 MB
+2026-02-15 23:01:00,596 MB
+2026-02-15 23:01:15,596 MB
+2026-02-15 23:01:30,596 MB
+2026-02-15 23:01:45,595 MB
+2026-02-15 23:02:00,595 MB
+2026-02-15 23:02:15,595 MB
+2026-02-15 23:02:30,595 MB
+2026-02-15 23:02:45,567 MB
