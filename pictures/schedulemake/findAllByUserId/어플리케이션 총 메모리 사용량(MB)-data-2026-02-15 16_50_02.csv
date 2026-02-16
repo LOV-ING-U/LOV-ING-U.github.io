@@ -1,62 +1,62 @@
-"Time","{container_label_com_docker_compose_config_hash=""81391a06a0cd4e9cb7138294c227747570b8e9147d03963143a52600b346cb00"", container_label_com_docker_compose_container_number=""1"", container_label_com_docker_compose_depends_on=""redis:service_healthy:false,mysql:service_healthy:false"", container_label_com_docker_compose_image=""sha256:475ada14b2e5d5c276c19caef8d7aaaf7571474d950463cc8f515f508fb56369"", container_label_com_docker_compose_oneoff=""False"", container_label_com_docker_compose_project=""rainmind"", container_label_com_docker_compose_project_config_files=""/home/ubuntu/apps/rainmind/docker-compose.ec2.yaml"", container_label_com_docker_compose_project_working_dir=""/home/ubuntu/apps/rainmind"", container_label_com_docker_compose_service=""app"", container_label_com_docker_compose_version=""5.0.2"", container_label_org_opencontainers_image_ref_name=""ubuntu"", container_label_org_opencontainers_image_version=""24.04"", id=""/system.slice/docker-a7590cfb908544e694c3b51494856028f8ecefa7029cffd190e7518c8485b98e.scope"", image=""rainmind-app"", instance=""cadvisor:8080"", job=""cadvisor"", name=""rainmind_app""}"
-2026-02-15 16:34:45,335 MB
-2026-02-15 16:35:00,335 MB
-2026-02-15 16:35:15,335 MB
-2026-02-15 16:35:30,335 MB
-2026-02-15 16:35:45,335 MB
-2026-02-15 16:36:00,335 MB
-2026-02-15 16:36:15,335 MB
-2026-02-15 16:36:30,335 MB
-2026-02-15 16:36:45,335 MB
-2026-02-15 16:37:00,335 MB
-2026-02-15 16:37:15,334 MB
-2026-02-15 16:37:30,334 MB
-2026-02-15 16:37:45,334 MB
-2026-02-15 16:38:00,334 MB
-2026-02-15 16:38:15,334 MB
-2026-02-15 16:38:30,334 MB
-2026-02-15 16:38:45,334 MB
-2026-02-15 16:39:00,334 MB
-2026-02-15 16:39:15,334 MB
-2026-02-15 16:39:30,334 MB
-2026-02-15 16:39:45,334 MB
-2026-02-15 16:40:00,337 MB
-2026-02-15 16:40:15,337 MB
-2026-02-15 16:40:30,337 MB
-2026-02-15 16:40:45,334 MB
-2026-02-15 16:41:00,334 MB
-2026-02-15 16:41:15,334 MB
-2026-02-15 16:41:30,334 MB
-2026-02-15 16:41:45,334 MB
-2026-02-15 16:42:00,334 MB
-2026-02-15 16:42:15,334 MB
-2026-02-15 16:42:30,334 MB
-2026-02-15 16:42:45,545 MB
-2026-02-15 16:43:00,1.05 GB
-2026-02-15 16:43:15,979 MB
-2026-02-15 16:43:30,869 MB
-2026-02-15 16:43:45,914 MB
-2026-02-15 16:44:00,1.08 GB
-2026-02-15 16:44:15,1.08 GB
-2026-02-15 16:44:30,1.08 GB
-2026-02-15 16:44:45,1.09 GB
-2026-02-15 16:45:00,1.09 GB
-2026-02-15 16:45:15,1.09 GB
-2026-02-15 16:45:30,1.09 GB
-2026-02-15 16:45:45,1.09 GB
-2026-02-15 16:46:00,1.10 GB
-2026-02-15 16:46:15,1.09 GB
-2026-02-15 16:46:30,1.10 GB
-2026-02-15 16:46:45,1.10 GB
-2026-02-15 16:47:00,1.10 GB
-2026-02-15 16:47:15,1.09 GB
-2026-02-15 16:47:30,1.10 GB
-2026-02-15 16:47:45,1.10 GB
-2026-02-15 16:48:00,1.10 GB
-2026-02-15 16:48:15,1.10 GB
-2026-02-15 16:48:30,1.10 GB
-2026-02-15 16:48:45,1.07 GB
-2026-02-15 16:49:00,1.07 GB
-2026-02-15 16:49:15,1.07 GB
-2026-02-15 16:49:30,1.07 GB
-2026-02-15 16:49:45,1.07 GB
+Time,"{container_label_com_docker_compose_config_hash=""81391a06a0cd4e9cb7138294c227747570b8e9147d03963143a52600b346cb00"", container_label_com_docker_compose_container_number=""1"", container_label_com_docker_compose_depends_on=""redis:service_healthy:false,mysql:service_healthy:false"", container_label_com_docker_compose_image=""sha256:475ada14b2e5d5c276c19caef8d7aaaf7571474d950463cc8f515f508fb56369"", container_label_com_docker_compose_oneoff=""False"", container_label_com_docker_compose_project=""rainmind"", container_label_com_docker_compose_project_config_files=""/home/ubuntu/apps/rainmind/docker-compose.ec2.yaml"", container_label_com_docker_compose_project_working_dir=""/home/ubuntu/apps/rainmind"", container_label_com_docker_compose_service=""app"", container_label_com_docker_compose_version=""5.0.2"", container_label_org_opencontainers_image_ref_name=""ubuntu"", container_label_org_opencontainers_image_version=""24.04"", id=""/system.slice/docker-a7590cfb908544e694c3b51494856028f8ecefa7029cffd190e7518c8485b98e.scope"", image=""rainmind-app"", instance=""cadvisor:8080"", job=""cadvisor"", name=""rainmind_app""}",,,
+2026-02-15 16:34,335 MB,,,
+2026-02-15 16:35,335 MB,,,
+2026-02-15 16:35,335 MB,,,
+2026-02-15 16:35,335 MB,,,
+2026-02-15 16:35,335 MB,,,
+2026-02-15 16:36,335 MB,,,
+2026-02-15 16:36,335 MB,,,
+2026-02-15 16:36,335 MB,,,
+2026-02-15 16:36,335 MB,,,
+2026-02-15 16:37,335 MB,,,
+2026-02-15 16:37,334 MB,,,
+2026-02-15 16:37,334 MB,,,
+2026-02-15 16:37,334 MB,,,
+2026-02-15 16:38,334 MB,,,
+2026-02-15 16:38,334 MB,,,
+2026-02-15 16:38,334 MB,,,
+2026-02-15 16:38,334 MB,,,
+2026-02-15 16:39,334 MB,,,
+2026-02-15 16:39,334 MB,,,
+2026-02-15 16:39,334 MB,,,
+2026-02-15 16:39,334 MB,,,
+2026-02-15 16:40,337 MB,,,
+2026-02-15 16:40,337 MB,,,
+2026-02-15 16:40,337 MB,,,
+2026-02-15 16:40,334 MB,,,
+2026-02-15 16:41,334 MB,,,
+2026-02-15 16:41,334 MB,,,
+2026-02-15 16:41,334 MB,,,
+2026-02-15 16:41,334 MB,,,
+2026-02-15 16:42,334 MB,,,
+2026-02-15 16:42,334 MB,,,
+2026-02-15 16:42,334,,,
+2026-02-15 16:42,545,,,
+2026-02-15 16:43,1050,,,
+2026-02-15 16:43,979,,,
+2026-02-15 16:43,869,,,
+2026-02-15 16:43,914,,,
+2026-02-15 16:44,1080,,,1002.904762
+2026-02-15 16:44,1080,,,
+2026-02-15 16:44,1080,,,
+2026-02-15 16:44,1090,,,
+2026-02-15 16:45,1090,,,
+2026-02-15 16:45,1090,,,
+2026-02-15 16:45,1090,,,
+2026-02-15 16:45,1090,,,
+2026-02-15 16:46,1100,,,
+2026-02-15 16:46,1090,,,
+2026-02-15 16:46,1100,,,
+2026-02-15 16:46,1100,,,
+2026-02-15 16:47,1100,,,
+2026-02-15 16:47,1090,,,
+2026-02-15 16:47,1100,,,
+2026-02-15 16:47,1.10 GB,,,
+2026-02-15 16:48,1.10 GB,,,
+2026-02-15 16:48,1.10 GB,,,
+2026-02-15 16:48,1.10 GB,,,
+2026-02-15 16:48,1.07 GB,,,
+2026-02-15 16:49,1.07 GB,,,
+2026-02-15 16:49,1.07 GB,,,
+2026-02-15 16:49,1.07 GB,,,
+2026-02-15 16:49,1.07 GB,,,
