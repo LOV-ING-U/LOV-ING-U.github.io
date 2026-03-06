@@ -1,0 +1,62 @@
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+import exec from 'k6/execution';
+
+export const options = {
+  vus: 100,
+  iterations: 500000,
+  maxDuration: '2h',
+  setupTimeout: '5m',
+};
+
+const BASE_URL = __ENV.BASE_URL;
+const PASSWORD = 'password12345678';
+const USER_COUNT = 500;
+const PER_USER = 1000;
+const LOCATION_ID = 1;
+
+export function setup() {
+  const tokens = [];
+  for (let i = 1; i <= USER_COUNT; i++) {
+    const res = http.post(
+      `${BASE_URL}/v1/auth/user/login`,
+      JSON.stringify({ nickname: `seed_${i}`, password: PASSWORD }),
+      { headers: { 'Content-Type': 'application/json' }, timeout: '30s' }
+    );
+    check(res, { 'login 200': (r) => r.status === 200 });
+    tokens.push(res.json('token'));
+    sleep(0.01);
+  }
+  return { tokens };
+}
+
+export default function (data) {
+  const iter = exec.scenario.iterationInTest;
+  const userIdx = iter % USER_COUNT;
+  const j = iter % PER_USER;
+
+  const token = data.tokens[userIdx];
+
+  const base = Date.now() + 35 * 60 * 1000;
+
+  const res = http.post(
+    `${BASE_URL}/v1/schedules`,
+    JSON.stringify({
+      title: `seed_${userIdx + 1}_bulk_${j}`,
+      locationId: LOCATION_ID,
+      startAt: new Date(base).toISOString(),
+      endAt: new Date(base + 30 * 60 * 1000).toISOString(),
+    }),
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      timeout: '60s',
+    }
+  );
+
+  check(res, { '201': (r) => r.status === 201 });
+
+ // sleep(0.001);
+}
