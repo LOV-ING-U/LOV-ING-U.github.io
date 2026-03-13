@@ -1,0 +1,14 @@
+docker compose restart mysql 로 각테스트 시작전 buffer pool 비우기
+
+
+초기에, mysql_global_variables_innodb_buffer_pool_size{instance="mysql-exporter:9104", job="mysql"} 134217728로 되어있어,
+ mysql:
+    # ... 기존 설정 ...
+    command:
+      - --innodb_buffer_pool_size=4G 수정 후 다시 테스트 & 테스트 시간 늘여서 하기(아직 하진않음)
+
+
+현실적으로: (아주많이)유저당 50번, 유저는 2만명, => 현재 속도라면,12분동안만 테스트해도 된다.
+(피크타임 모사에 적절한지?) -> VU=50, 커넥션풀도 min=max=50으로 설정함
+
++ 현재 상황은 피크타임 모사에 적절 : 자원경합(초록색선 vs 노란색선 에서, 초록색선이 많이 대기중) 심함

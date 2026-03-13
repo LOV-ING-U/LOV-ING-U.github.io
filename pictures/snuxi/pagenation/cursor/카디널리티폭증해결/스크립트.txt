@@ -1,0 +1,53 @@
+import http from 'k6/http';
+import exec from 'k6/execution';
+
+const BASE_URL = __ENV.BASE_URL;
+
+export const options = {
+  scenarios: {
+    cursor_scroll: {
+      executor: 'constant-vus',
+      vus: 50,
+      duration: '12m',
+    },
+  },
+};
+
+export default function () {
+  const iter = exec.vu.iterationInScenario;
+  const roomId = (iter % 5000) + 1;
+  const userId = roomId; // 각 방의 방장 = 해당 방 참가자
+
+  let cursor = null;
+
+  for (let i = 0; i < 10; i++) {
+    let url = `${BASE_URL}/rooms/${roomId}/messages?size=10`;
+    if (cursor !== null) {
+      url += `&cursor=${cursor}`;
+    }
+
+    const res = http.get(url, {
+      headers: {
+        'X-USER-ID': String(userId),
+      },
+
+      tags: { name: 'get_messages' },
+    });
+
+    if (res.status !== 200) {
+      throw new Error(`get messages failed: room=${roomId}, user=${userId}, status=${res.status}, body=${res.body}`);
+    }
+
+    const body = res.json();
+
+    if (!body.items || body.items.length === 0) {
+      break;
+    }
+
+    if (!body.hasNext || body.nextCursor == null) {
+      break;
+    }
+
+    cursor = body.nextCursor;
+  }
+}

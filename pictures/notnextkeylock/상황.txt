@@ -1,0 +1,34 @@
+A.
+SET autocommit = 0;
+START TRANSACTION;
+
+UPDATE pots
+SET status = CASE
+        WHEN current_count + 1 >= min_capacity THEN 'MATCHED'
+        ELSE status
+    END,
+    current_count = current_count + 1
+WHERE id = 1
+  AND current_count < max_capacity;
+
+B.
+SET autocommit = 0;
+START TRANSACTION;
+
+UPDATE pots
+SET current_count = current_count + 1
+WHERE id = 1
+  AND current_count < max_capacity;
+이쿼리는 멈춘다.
+
+C.
+SELECT 
+    OBJECT_SCHEMA,
+    OBJECT_NAME,
+    INDEX_NAME,
+    LOCK_TYPE,
+    LOCK_MODE,
+    LOCK_STATUS,
+    LOCK_DATA
+FROM performance_schema.data_locks
+WHERE OBJECT_NAME = 'pots';

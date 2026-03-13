@@ -1,0 +1,3 @@
+http_server_requests_seconds_max * 1000 = 최대응답시간(ms)
+mysql_global_status_innodb_buffer_pool_bytes_data / 1000 / 1000=index+data가 차지하는메모리용량(mb)
+rate(mysql_global_status_sort_rows[1m])=filesort(CPU)발생빈도
