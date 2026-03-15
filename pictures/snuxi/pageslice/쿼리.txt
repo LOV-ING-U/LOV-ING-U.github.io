@@ -1,0 +1,7 @@
+hikaricp_connections_active{pool="HikariPool-1"} 
+/ 
+hikaricp_connections_max{pool="HikariPool-1"} = DB커넥션풀 점유율
+
+rate(hikaricp_connections_usage_seconds_sum[1m]) * 1000 = 초당DB커넥션풀 점유시간(ms)
+
+sum(rate(container_cpu_usage_seconds_total{name="snuxi-local-mysql"}[1m])) * 100 = MySQL CPU rate(%)
